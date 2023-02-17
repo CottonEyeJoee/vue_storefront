@@ -1,12 +1,11 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import dayjs from 'dayjs';
 
 import { useStore } from '../store';
 
 const store = useStore();
 
-const isMetric = () => store.activeUnit === 'metric';
+const isMetric = () => store.data.activeUnit === 'metric';
 
 const temperature = computed(() =>
   isMetric() ? `${store.tempInC}°C` : `${store.tempInF}°F`,
@@ -23,21 +22,6 @@ const locationAndCountry = computed(
 const windSpeed = computed(() =>
   isMetric() ? `${store.windInKMH}km/h` : `${store.windInMPH}mph`,
 );
-
-const sunrise = computed(() =>
-  store.data.sunrise
-    ? dayjs.unix(store.data.sunrise).format('HH:mm')
-    : 'no data',
-);
-
-const sunset = computed(() =>
-  store.data.sunrise
-    ? dayjs.unix(store.data.sunrise).format('HH:mm')
-    : 'no data',
-);
-
-// TODO: remove me later
-console.log(store.addTenMinutes(store.data.timestamp).format('HH:mm'));
 </script>
 
 <template>
@@ -48,8 +32,8 @@ console.log(store.addTenMinutes(store.data.timestamp).format('HH:mm'));
     <div>{{ locationAndCountry }}</div>
     <div>Humidity: {{ store.data.humidity }}%</div>
     <div>Wind: {{ windSpeed }}</div>
-    <div>Sunrise: {{ sunrise }}</div>
-    <div>Sunset: {{ sunset }}</div>
+    <div>Sunrise: {{ store.sunrise }}</div>
+    <div>Sunset: {{ store.sunset }}</div>
     <div class="button-group">
       <button
         type="button"

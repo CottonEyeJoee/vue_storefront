@@ -2,7 +2,7 @@
 import { onMounted, ref } from 'vue';
 import axios, { AxiosError, AxiosResponse } from 'axios';
 import WeatherWidget from './components/WeatherWidget.vue';
-import { OpenWeatherAPIResponse, Units } from './types';
+import { OpenWeatherAPIResponse } from './types';
 import { useStore } from './store';
 
 const store = useStore();
@@ -44,8 +44,27 @@ const fetchData = () => {
   });
 };
 
+const cleareLocalStorage = () => {
+  localStorage.clear();
+};
+
+const isOldData = () => {
+  if (store.isOldData) {
+    console.log('old data');
+  } else {
+    console.log('new data');
+  }
+};
+
 onMounted(() => {
-  fetchData();
+  // TODO: find a better way if data is initialized
+  if (store.isOldData || !store.data.location) {
+    fetchData();
+  } else {
+    // TODO: move to store.data and create getter isInitialized???
+    isLoading.value = false;
+    isSuccess.value = true;
+  }
 });
 </script>
 
@@ -57,6 +76,9 @@ onMounted(() => {
   <template v-if="isLoading"> Loading... </template>
   <template v-else-if="isSuccess">
     <WeatherWidget />
+    <!-- TODO: remove buttons -->
+    <!-- <button @click="cleareLocalStorage">localStorage.clear()</button> -->
+    <!-- <button @click="isOldData">isOldData</button> -->
   </template>
   <template v-else> Try again </template>
 </template>

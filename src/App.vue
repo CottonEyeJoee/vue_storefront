@@ -44,7 +44,7 @@ const fetchData = () => {
   });
 };
 
-const cleareLocalStorage = () => {
+const clearLocalStorage = () => {
   localStorage.clear();
 };
 
@@ -77,7 +77,7 @@ onMounted(() => {
   <template v-else-if="isSuccess">
     <WeatherWidget />
     <!-- TODO: remove buttons -->
-    <!-- <button @click="cleareLocalStorage">localStorage.clear()</button> -->
+    <!-- <button @click="clearLocalStorage">localStorage.clear()</button> -->
     <!-- <button @click="isOldData">isOldData</button> -->
   </template>
   <template v-else> Try again </template>

@@ -20,11 +20,15 @@ focus on new technologies and coding patterns-->
 
   - [x] Weather description
 
-  - [x] Location
+  - [x] Location & Country
 
   - [x] Humidity
 
   - [x] Wind speed
+
+    - [x] km/h
+
+    - [x] mph
 
   - [x] Sunrise
 
@@ -36,7 +40,7 @@ focus on new technologies and coding patterns-->
 
 - [x] Locally cache data
 
-- [x] Use Vue
+- [x] Vue
 
 ## :fire: Additional Features
 

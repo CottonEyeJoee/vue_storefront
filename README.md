@@ -1,8 +1,6 @@
 # Vue Storefront Code Challenge
 
-<!-- | Light    | Dark    |
-| -------- | ------- |
-| lightImg | darkImg | -->
+<!-- preview screenshots -->
 
 <!-- ## [Demo link](https://cottoneyejoee.github.io/vue_storefront/) -->
 
@@ -93,9 +91,9 @@ focus on new technologies and coding patterns-->
 
 -  -->
 
-<!-- ## :lady_beetle: Known Bugs
+## :lady_beetle: Known Bugs
 
--  -->
+- GitHub Actions deployment completes but the application throws an **404 error** when leading `main.ts` [(demo link)](https://cottoneyejoee.github.io/vue_storefront/)
 
 ## :scroll: Scripts
 

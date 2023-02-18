@@ -40,17 +40,15 @@ focus on new technologies and coding patterns-->
 
 - [x] Locally cache data
 
-- [x] Vue
-
 ## :fire: Additional Features
 
 - [x] [Vite](https://vitejs.dev/) bundler
 
 - [x] [pnpm](https://pnpm.io/) package manager
 
-- [x] 100% Typescript
+- [x] Type save with Typescript
 
-- [x] 100% composition API
+- [x] Vue3 (100% composition API)
 
 - [ ] Design
 

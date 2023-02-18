@@ -64,16 +64,16 @@ focus on new technologies and coding patterns-->
 
 ## :toolbox: Tooling
 
-| Package                                | Description                                                                                                    |
-| -------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `vue`                                  | A JavaScript framework for building user interfaces [(Github)](https://github.com/vuejs/core)                  |
-| `[pinia, pinia-plugin-persistedstate]` | Adaptation of the flux state management for vue (successor of Vuex) [(Github)](https://github.com/vuejs/pinia) |
-| `axios`                                | Promise based HTTP client [(Github)](https://github.com/axios/axios)                                           |
-| `dayjs`                                | Minimalist time & date library [(Github)](https://github.com/iamkun/dayjs)                                     |
-| `vite`                                 | Build tool based on [esbuild](https://esbuild.github.io/) [(GitHub)](https://github.com/vitejs/vite)           |
-| `[typescript, vue-tsc]`                | Type safe superset for Javascript [(Github)](hhttps://github.com/microsoft/TypeScript)                         |
-| `sass`                                 | Popular CSS preprocessor [(Github)](https://github.com/sass/sass)                                              |
-| `openWeather`                          | OpenWeather is a free weather api, you find more information [here](https://openweathermap.org/)               |
+| Package       | Description                                                                                                    |
+| ------------- | -------------------------------------------------------------------------------------------------------------- |
+| `vue`         | A JavaScript framework for building user interfaces [(Github)](https://github.com/vuejs/core)                  |
+| `pinia`       | Adaptation of the flux state management for vue (successor of Vuex) [(Github)](https://github.com/vuejs/pinia) |
+| `axios`       | Promise based HTTP client [(Github)](https://github.com/axios/axios)                                           |
+| `dayjs`       | Minimalist time & date library [(Github)](https://github.com/iamkun/dayjs)                                     |
+| `vite`        | Build tool based on [esbuild](https://esbuild.github.io/) [(GitHub)](https://github.com/vitejs/vite)           |
+| `typescript`  | Type safe superset for Javascript [(Github)](hhttps://github.com/microsoft/TypeScript)                         |
+| `sass`        | Popular CSS preprocessor [(Github)](https://github.com/sass/sass)                                              |
+| `openWeather` | OpenWeather is a free weather api, you find more information [here](https://openweathermap.org/)               |
 
 ## :magic_wand: Setup
 

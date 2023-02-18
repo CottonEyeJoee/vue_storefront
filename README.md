@@ -93,7 +93,7 @@ focus on new technologies and coding patterns-->
 
 ## :lady_beetle: Known Bugs
 
-- GitHub Actions deployment completes but the application throws an **404 error** when leading `main.ts` [(demo link)](https://cottoneyejoee.github.io/vue_storefront/)
+- Deployed application throws an **404 error** when loading `main.ts` resulting in empty page [(demo link)](https://cottoneyejoee.github.io/vue_storefront/)
 
 ## :scroll: Scripts
 

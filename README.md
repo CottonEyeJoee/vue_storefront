@@ -1,18 +1,115 @@
-# Vue 3 + TypeScript + Vite
+# Vue Storefront Code Challenge
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+<!-- | Light    | Dark    |
+| -------- | ------- |
+| lightImg | darkImg | -->
 
-## Recommended IDE Setup
+<!-- ## [Demo link](https://cottoneyejoee.github.io/vue_storefront/) -->
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+<!-- ## :pushpin: Foreword
+Vue 3 + TypeScript + Vite + Pinia
+focus on new technologies and coding patterns-->
 
-## Type Support For `.vue` Imports in TS
+## :clipboard: Requirements
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+- [x] Show weather data based on user location
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+  - [x] Temperature
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+    - [x] Celsius
+
+    - [x] Fahrenheit
+
+  - [x] Weather description
+
+  - [x] Location
+
+  - [x] Humidity
+
+  - [x] Wind speed
+
+  - [x] Sunrise
+
+  - [x] Sunset
+
+- [x] Unit toggle
+
+  - [x] Reduced API calls (convert temperature & wind speed locally)
+
+- [x] Locally cache data
+
+- [x] Use Vue
+
+## :fire: Additional Features
+
+- [x] [Vite](https://vitejs.dev/) bundler
+
+- [x] [pnpm](https://pnpm.io/) package manager
+
+- [x] 100% Typescript
+
+- [x] 100% composition API
+
+- [ ] Design
+
+- [ ] Semantic HTML
+
+- [ ] Refresh timer
+
+- [ ] Theme switch for dark and light mode
+
+- [ ] Unit Tests
+
+- [ ] Fully responsive design (set to mobile dimension for presentation)
+
+- [ ] [Demo](https://cottoneyejoee.github.io/vue_storefront/) is deployed on github pages
+
+## :toolbox: Tooling
+
+| Package                                | Description                                                                                                    |
+| -------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `vue`                                  | A JavaScript framework for building user interfaces [(Github)](https://github.com/vuejs/core)                  |
+| `[pinia, pinia-plugin-persistedstate]` | Adaptation of the flux state management for vue (successor of Vuex) [(Github)](https://github.com/vuejs/pinia) |
+| `axios`                                | Promise based HTTP client [(Github)](https://github.com/axios/axios)                                           |
+| `dayjs`                                | Minimalist time & date library [(Github)](https://github.com/iamkun/dayjs)                                     |
+| `vite`                                 | Build tool based on [esbuild](https://esbuild.github.io/) [(GitHub)](https://github.com/vitejs/vite)           |
+| `[typescript, vue-tsc]`                | Type safe superset for Javascript [(Github)](hhttps://github.com/microsoft/TypeScript)                         |
+| `sass`                                 | Popular CSS preprocessor [(Github)](https://github.com/sass/sass)                                              |
+
+## :magic_wand: Setup
+
+1. Open the terminal in the root directory & execute `pnpm i` (`npm i`)
+
+1. Create an `.env.local' file in the root directory and add the following variables (make sure to save the file)
+
+   ```env
+   VITE_API_KEY={websocket-endpoint}
+   VITE_API_BASE_URL={websocket-token}
+   ```
+
+1. In the terminal execute the command `pnpm run dev` (`npm run dev`) in the root directory
+
+<!-- ## :construction: TODO
+
+-  -->
+
+<!-- ## :lady_beetle: Known Bugs
+
+-  -->
+
+## :scroll: Scripts
+
+### `pnpm i`
+
+Installs the project's dependencies specifies in package.json.
+
+### `pnpm run dev`
+
+This script runs application in development mode
+
+<!-- ### `pnpm test`
+This script runs vitest watcher-->
+
+### `pnpm build`
+
+Creates an optimized bundle ready to be deployed.

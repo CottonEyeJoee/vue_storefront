@@ -73,6 +73,7 @@ focus on new technologies and coding patterns-->
 | `vite`                                 | Build tool based on [esbuild](https://esbuild.github.io/) [(GitHub)](https://github.com/vitejs/vite)           |
 | `[typescript, vue-tsc]`                | Type safe superset for Javascript [(Github)](hhttps://github.com/microsoft/TypeScript)                         |
 | `sass`                                 | Popular CSS preprocessor [(Github)](https://github.com/sass/sass)                                              |
+| `openWeather`                          | OpenWeather is a free weather api, you find more information [here](https://openweathermap.org/)               |
 
 ## :magic_wand: Setup
 
@@ -81,8 +82,8 @@ focus on new technologies and coding patterns-->
 1. Create an `.env.local' file in the root directory and add the following variables (make sure to save the file)
 
    ```env
-   VITE_API_KEY={websocket-endpoint}
-   VITE_API_BASE_URL={websocket-token}
+   VITE_API_KEY={api-key}
+   VITE_API_BASE_URL={base-url}
    ```
 
 1. In the terminal execute the command `pnpm run dev` (`npm run dev`) in the root directory

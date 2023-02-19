@@ -54,19 +54,13 @@ export const useStore = defineStore(
       (): number => Math.round(data.windSpeed * 2.236936 * 10) / 10,
     );
 
-    // const unixToTime = computed(() => (timestamp: number): string => {
-    //   return dayjs.unix(timestamp).format('HH:mm');
-    // });
-    // const sunrise = computed((): string =>
-    //   // FIXME: typescript error
-    //   data.sunrise ? unixToTime(data.sunrise) : 'no data',
-    // );
+    const unixToTime = (timestamp: number): string =>
+      dayjs.unix(timestamp).format('HH:mm');
     const sunrise = computed((): string =>
-      // FIXME: typescript error
-      data.sunrise ? dayjs.unix(data.sunrise).format('HH:mm') : 'no data',
+      data.sunrise ? unixToTime(data.sunrise) : 'no data',
     );
     const sunset = computed((): string =>
-      data.sunset ? dayjs.unix(data.sunset).format('HH:mm') : 'no data',
+      data.sunset ? unixToTime(data.sunset) : 'no data',
     );
 
     const isActiveUnit = computed(

@@ -1,6 +1,6 @@
 # Vue Storefront Code Challenge
 
-<!-- preview screenshots -->
+![Preview of the weather widget](/screenshot/preview.png)
 
 <!-- ## [Demo link](https://cottoneyejoee.github.io/vue_storefront/) -->
 
@@ -50,31 +50,33 @@ focus on new technologies and coding patterns-->
 
 - [x] Vue3 (100% composition API)
 
-- [ ] Design
+- [x] Design
 
-- [ ] Semantic HTML
+- [x] Semantic HTML
 
-- [ ] Refresh timer
+- [x] Accessible HTML
 
-- [ ] Theme switch for dark and light mode
+<!-- - [ ] Refresh timer -->
 
-- [ ] Unit Tests
+<!-- - [ ] Theme switch for dark and light mode -->
 
-- [ ] Fully responsive design (set to mobile dimension for presentation)
+<!-- - [ ] Unit Tests -->
 
-- [ ] [Demo](https://cottoneyejoee.github.io/vue_storefront/) is deployed on github pages
+<!-- - [ ] Fully responsive design (set to mobile dimension for presentation) -->
+
+<!-- - [ ] [Demo](https://cottoneyejoee.github.io/vue_storefront/) is deployed on github pages -->
 
 ## :toolbox: Tooling
 
-| Package      | Description                                                                                                    |
-| ------------ | -------------------------------------------------------------------------------------------------------------- |
-| `vue`        | A JavaScript framework for building user interfaces [(Github)](https://github.com/vuejs/core)                  |
-| `pinia`      | Adaptation of the flux state management for vue (successor of Vuex) [(Github)](https://github.com/vuejs/pinia) |
-| `axios`      | Promise based HTTP client [(Github)](https://github.com/axios/axios)                                           |
-| `dayjs`      | Minimalist time & date library [(Github)](https://github.com/iamkun/dayjs)                                     |
-| `vite`       | Build tool based on [esbuild](https://esbuild.github.io/) [(GitHub)](https://github.com/vitejs/vite)           |
-| `typescript` | Type safe superset for Javascript [(Github)](hhttps://github.com/microsoft/TypeScript)                         |
-| `sass`       | Popular CSS preprocessor [(Github)](https://github.com/sass/sass)                                              |
+| Package      | Description                                                                                                                                          |
+| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `vue`        | JavaScript framework for building user interfaces [(Github)](https://github.com/vuejs/core)                                                          |
+| `pinia`      | Lightweight, intuitive, TypeScript-first state management system for Vue [(Github)](https://github.com/vuejs/pinia)                                  |
+| `axios`      | Promise based HTTP client [(Github)](https://github.com/axios/axios)                                                                                 |
+| `dayjs`      | Minimalist JavaScript date manipulation library [(Github)](https://github.com/iamkun/dayjs)                                                          |
+| `vite`       | Fast, efficient build tool and development server for modern web projects [(GitHub)](https://github.com/vitejs/vite)                                 |
+| `typescript` | Superset of JavaScript with optional static typing and enhanced maintainability and scalability [(Github)](hhttps://github.com/microsoft/TypeScript) |
+| `sass`       | CSS preprocessor that extends the capabilities of traditional CSS [(Github)](https://github.com/sass/sass)                                           |
 
 ## :magic_wand: Setup
 

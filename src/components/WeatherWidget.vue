@@ -60,40 +60,51 @@ const windSpeed = computed(() =>
 </script>
 
 <template>
-  <article class="weather-widget grid">
+  <article
+    class="weather-widget grid"
+    role="region"
+    aria-label="Weather Information">
     <header class="grid__top">
-      <h2>{{ dateNow }}</h2>
-      <h3 class="subtitle">{{ locationAndCountry }}</h3>
+      <h2 id="date" aria-level="2">{{ dateNow }}</h2>
+      <h3 id="location" aria-level="3" class="subtitle">
+        {{ locationAndCountry }}
+      </h3>
     </header>
     <main class="weather-data grid__left">
-      <h1 class="temperature">
-        {{ temperature }}<sup>{{ temperatureUnit }}</sup>
+      <h1
+        id="temperature"
+        class="temperature"
+        aria-level="1"
+        aria-describedby="unit">
+        {{ temperature }}<sup id="unit">{{ temperatureUnit }}</sup>
       </h1>
-      <h4 class="description">{{ weatherDescription }}</h4>
+      <h2 id="description" aria-level="2" class="description">
+        {{ weatherDescription }}
+      </h2>
     </main>
-    <aside class="weather-illustration grid__right">
+    <aside aria-hidden="true" class="weather-illustration grid__right">
       <img :src="imgSrc" :alt="`${weatherIcon} illustration`" />
     </aside>
     <footer class="weather-details grid__bottom">
       <ul>
         <li class="flex">
           <img src="../assets/icons/humidity.svg" alt="humidity icon" />
-          {{ store.data.humidity }}%
+          <span id="humidity">{{ store.data.humidity }}%</span>
         </li>
         <li class="flex">
           <img src="../assets/icons/wind.svg" alt="wind icon" />
-          {{ windSpeed }}
+          <span id="wind">{{ windSpeed }}</span>
         </li>
         <li class="flex">
           <img
             style="width: 28px"
             src="../assets/icons/sunrise.svg"
-            alt="wind icon" />
-          {{ store.sunrise }}
+            alt="sunrise icon" />
+          <span id="sunrise">{{ store.sunrise }}</span>
         </li>
         <li style="width: 28px" class="flex">
-          <img src="../assets/icons/sunset.svg" alt="wind icon" />
-          {{ store.sunset }}
+          <img src="../assets/icons/sunset.svg" alt="sunset icon" />
+          <span id="sunset">{{ store.sunset }}</span>
         </li>
       </ul>
       <div class="option-buttons">
@@ -101,14 +112,14 @@ const windSpeed = computed(() =>
           type="button"
           :class="store.isActiveUnit('metric') && 'active'"
           @click="store.setUnit('metric')"
-          title="°C, m/s">
+          title="Switch to metric units (°C, m/s)">
           Metric
         </button>
         <button
           type="button"
           :class="store.isActiveUnit('imperial') && 'active'"
           @click="store.setUnit('imperial')"
-          title="°F, mph">
+          title="Switch to imperial units (°F, mph)">
           Imperial
         </button>
       </div>
@@ -148,7 +159,9 @@ const windSpeed = computed(() =>
     }
     .description {
       margin-top: -22px;
+      font-size: 16px;
       font-weight: 400;
+      text-align: center;
       text-transform: capitalize;
     }
   }
@@ -220,10 +233,6 @@ h2 {
 h3 {
   font-size: 18px;
   text-align: left;
-}
-
-h4 {
-  font-size: 16px;
 }
 
 ul {

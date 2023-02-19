@@ -44,18 +44,6 @@ const fetchData = () => {
   });
 };
 
-const clearLocalStorage = () => {
-  localStorage.clear();
-};
-
-const isOldData = () => {
-  if (store.isOldData) {
-    console.log('old data');
-  } else {
-    console.log('new data');
-  }
-};
-
 onMounted(() => {
   // TODO: find a better way if data is initialized
   if (store.isOldData || !store.data.location) {
@@ -69,34 +57,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <!-- TODO: remove imgs -->
-  <!-- <img src="/vite.svg" class="logo" alt="Vite logo" /> -->
-  <!-- <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" /> -->
-
   <template v-if="isLoading"> Loading... </template>
   <template v-else-if="isSuccess">
     <WeatherWidget />
-    <!-- TODO: remove buttons -->
-    <!-- <button @click="clearLocalStorage">localStorage.clear()</button> -->
-    <!-- <button @click="isOldData">isOldData</button> -->
   </template>
-  <template v-else> Try again </template>
+  <template v-else><span role="alert">Try again</span> </template>
 </template>
-
-<style scoped>
-/* TODO: remove styles */
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>

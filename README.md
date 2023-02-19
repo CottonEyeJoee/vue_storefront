@@ -38,7 +38,7 @@ focus on new technologies and coding patterns-->
 
   - [x] Reduced API calls (convert temperature & wind speed locally)
 
-- [x] Locally cache data
+- [x] Cache data locally
 
 ## :fire: Additional Features
 

@@ -2,7 +2,7 @@ import { defineStore } from 'pinia';
 import dayjs from 'dayjs';
 import duration from 'dayjs/plugin/duration';
 
-import { OpenWeatherAPIResponse, Units } from './types';
+import { IconCodes, OpenWeatherAPIResponse, Units } from './types';
 import { computed, reactive } from 'vue';
 
 dayjs.extend(duration);
@@ -15,6 +15,7 @@ export type Data = {
   activeUnit: Units;
   temp: number;
   weather: string | undefined;
+  iconCode: IconCodes;
   humidity: number | undefined;
   windSpeed: number;
   timestamp: number;
@@ -31,6 +32,7 @@ export const useStore = defineStore(
       activeUnit: DEFAULT_UNIT,
       temp: NaN,
       weather: undefined,
+      iconCode: '50d',
       humidity: NaN,
       windSpeed: NaN,
       timestamp: NaN,
@@ -87,6 +89,7 @@ export const useStore = defineStore(
       data.country = sys.country;
       data.temp = main.temp;
       data.weather = weather[0].description;
+      data.iconCode = weather[0].icon;
       data.humidity = main.humidity;
       data.windSpeed = wind.speed;
       data.timestamp = dayjs().unix();

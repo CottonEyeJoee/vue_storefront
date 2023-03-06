@@ -16,7 +16,7 @@
     "skipLibCheck": true,
     "noEmit": true,
     "types": [
-      "pinia-plugin-persist"
+      "pinia-plugin-persistedstate"
     ]
   },
   "include": [

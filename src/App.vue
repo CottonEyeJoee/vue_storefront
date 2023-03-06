@@ -45,7 +45,7 @@ const fetchData = () => {
 };
 
 onMounted(() => {
-  // TODO: find a better way if data is initialized
+  // TODO: find a better way if data is not initialized
   if (store.isOldData || !store.data.location) {
     fetchData();
   } else {
